@@ -25,9 +25,7 @@ export default class Square extends React.Component {
     } catch (e) {}
   }
 
-  onCanvasDidMount(canvas) {
-    
-  }
+  onCanvasDidMount(canvas) {}
 
   onCanvasInited(canvas, width, height) {
     this.createProton(canvas, width, height);
@@ -50,7 +48,11 @@ export default class Square extends React.Component {
     emitter.addInitialize(new Proton.Mass(1));
     emitter.addInitialize(new Proton.Radius(4, 70));
     emitter.addInitialize(
-      new Proton.Velocity(new Proton.Span(2, 10), new Proton.Span(0), "polar")
+      new Proton.Velocity(
+        new Proton.Span(this.props.velocity ? this.props.velocity[0] : 2, this.props.velocity ? this.props.velocity[1] : 10), 
+        new Proton.Span(0), 
+        "polar"
+      )
     );
     emitter.addInitialize(
       new Proton.Position(
@@ -125,7 +127,8 @@ export default class Square extends React.Component {
 
   render() {
     return (
-      <Canvas bg={this.props.bg}
+      <Canvas
+        bg={this.props.bg}
         globalCompositeOperation="lighter"
         onCanvasDidMount={this.onCanvasDidMount.bind(this)}
         onCanvasInited={this.onCanvasInited.bind(this)}

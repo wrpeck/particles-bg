@@ -40,7 +40,7 @@ export default class ParticlesBg extends Component {
   }
 
   getBgParticles() {
-    const { type, num, bg, color, config } = this.props;
+    const { type, num, bg, color, config, velocity } = this.props;
 
     let particles;
     switch (String(type).toLowerCase()) {
@@ -66,7 +66,7 @@ export default class ParticlesBg extends Component {
         particles = <Polygon num={num} bg={bg} color={color} />;
         break;
       case "square":
-        particles = <Square num={num} bg={bg} color={color} />;
+        particles = <Square num={num} bg={bg} color={color} velocity={velocity} />;
         break;
       case "tadpole":
         particles = <Tadpole num={num} bg={bg} color={color} />;
