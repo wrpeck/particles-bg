@@ -1,4 +1,8 @@
-# particles-bg
+# particles-bg-custom
+
+This is a forked version of particles-bg, created by lindelof. All credit to them for this lovely package. My version is slightly modified to accept velocity parameters into premade particles. 
+
+## Original README content
 
 [![NPM](https://img.shields.io/npm/v/particles-bg.svg)](https://www.npmjs.com/package/particles-bg) [![npm](https://img.shields.io/npm/dm/particles-bg)](https://www.npmjs.com/package/particles-bg) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
